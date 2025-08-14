@@ -13,5 +13,31 @@ interface User{
     isAdmin? : boolean;
 }
 
+// Generics: Think of it as params and argu, you can put what ever you want
+interface Backpack<T> {
+    id: string;
+    product: T;
+    quantity: number;
+}
 
+function showBackpack<T>(b: Backpack<T>) {
+    return b; // Now it returns something (or anything)
+}
 
+console.log(showBackpack({ id: "BP1", product: "Laptop", quantity: 2 }));
+// showBackpack({ id: "BP2", product: { name: "Phone", price: 999 }, quantity: 1 });
+
+// This is how you objectify base on the interface or blueprint
+const user : User = {
+    id : 20,
+    name: "Dikson",
+}
+
+console.log("Testing if const user runs: ",user)
+
+// Array in TS
+const numbers: number[] = [1, 2, 3, 4];
+const names: string[] = ["Nash", "Dikson", "Alex"];
+
+const numbers2: Array<number> = [5, 6, 7, 8];
+const names2: Array<string> = ["John", "Mike", "Sara"];
