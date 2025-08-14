@@ -41,3 +41,25 @@ const names: string[] = ["Nash", "Dikson", "Alex"];
 
 const numbers2: Array<number> = [5, 6, 7, 8];
 const names2: Array<string> = ["John", "Mike", "Sara"];
+
+
+// Testing Nash's Knowledge
+
+// Implicit no "return" keyword
+// Explicit have "return" keyword
+
+const arrowFunc = (name: string) : string => {
+    return name
+}
+
+
+const arrowFuncObj = (id: number, name: string) : User => {
+    return {
+        id: id,
+        name: name
+    }
+}
+
+// console.log(arrowFunc("Nash"))
+
+console.log(arrowFuncObj(100, "wow"))
