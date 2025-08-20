@@ -60,6 +60,26 @@ const arrowFuncObj = (id: number, name: string) : User => {
     }
 }
 
-// console.log(arrowFunc("Nash"))
 
-console.log(arrowFuncObj(100, "wow"))
+
+// Practice Student Info
+
+interface Student{
+    id: Number,
+    name: String,
+    department: String
+}
+
+const studentInfo = (id: Number, name: String, department: String) : Student => {
+    return{
+        id,
+        name,
+        department
+    }
+}
+
+const simpleArrowFunc = (name: string) => {
+    return name
+}
+console.log(simpleArrowFunc("Nash M."))
+console.log(studentInfo(10, "Nash Maglaqui", "School of Engineering and Architecture"))
